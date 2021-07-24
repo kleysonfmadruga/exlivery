@@ -30,7 +30,7 @@ defmodule Exlivery.Orders.Order do
     )
   end
 
-  defp sum_prices(%Item{unitary_price: price, quantity: quantity}, acc) do
+  defp sum_prices(%Item{unit_price: price, quantity: quantity}, acc) do
     price
     |> Decimal.mult(quantity)
     |> Decimal.add(acc)
