@@ -25,9 +25,9 @@ defmodule Exlivery.Orders.Order do
   defp calculate_total_price(items) do
     items
     |> Enum.reduce(
-         Decimal.new("0.00"),
-         fn item, acc -> sum_prices(item, acc) end
-       )
+      Decimal.new("0.00"),
+      fn item, acc -> sum_prices(item, acc) end
+    )
   end
 
   defp sum_prices(%Item{unitary_price: price, quantity: quantity}, acc) do
