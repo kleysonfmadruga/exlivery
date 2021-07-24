@@ -23,7 +23,7 @@ defmodule Exlivery.Orders.Item do
       %__MODULE__{
         description: description,
         category: category,
-        unity_price: unit_price,
+        unit_price: unit_price,
         quantity: quantity
       }
     }
